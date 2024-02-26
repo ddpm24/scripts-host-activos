@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Wed Feb 14 22:57:59 2024 as: nmap -Pn -sS -sU -p 0-65535 -O -oN C:\\Deivi_Daniel\\Escuela\\Sistemas\\PMDeivi_Actidad_Evaluable2ev\\3.4_Network_Scanner_Escaneador_de_red\\resultado_scan_20240214_225759.txt -oX C:\\Deivi_Daniel\\Escuela\\Sistemas\\PMDeivi_Actidad_Evaluable2ev\\3.4_Network_Scanner_Escaneador_de_red\\resultado_scan_20240214_225759.xml 192.168.1.1 -->
+<nmaprun scanner="nmap" args="nmap -Pn -sS -sU -p 0-65535 -O -oN C:\\Deivi_Daniel\\Escuela\\Sistemas\\PMDeivi_Actidad_Evaluable2ev\\3.4_Network_Scanner_Escaneador_de_red\\resultado_scan_20240214_225759.txt -oX C:\\Deivi_Daniel\\Escuela\\Sistemas\\PMDeivi_Actidad_Evaluable2ev\\3.4_Network_Scanner_Escaneador_de_red\\resultado_scan_20240214_225759.xml 192.168.1.1" start="1707947879" startstr="Wed Feb 14 22:57:59 2024" version="7.94" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+<scaninfo type="udp" protocol="udp" numservices="65536" services="0-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.1.1" addrtype="ipv4"/>
+<address addr="8C:19:B5:FE:10:4B" addrtype="mac" vendor="Arcadyan"/>
+<hostnames>
+</hostnames>
+</hosthint>

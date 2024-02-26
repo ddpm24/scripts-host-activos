@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Configuración de red
+DIRECCION_IP="192.168.1.16"
+MASCARA_SUBRED="255.255.255.0"
+PUERTA_ENLACE="192.168.1.1"
+
+# Nombre del archivo de salida
+FECHA=$(date +"%Y%m%d_%H%M%S")
+OUTPUT_FILE="C:/Deivi_Daniel/Escuela/Sistemas/PMDeivi_Actidad_Evaluable2ev/3.4_Network_Scanner_Escaneador_de_red/resultado_scan_$FECHA.txt"
+OUTPUT_XML="C:/Deivi_Daniel/Escuela/Sistemas/PMDeivi_Actidad_Evaluable2ev/3.4_Network_Scanner_Escaneador_de_red/resultado_scan_$FECHA.xml"
+
+# Escaneo del router por defecto y la dirección IP del equipo local
+nmap -Pn -sS -sU -p 0-65535 -O -oN "$OUTPUT_FILE" -oX "$OUTPUT_XML" "$PUERTA_ENLACE"
+
+# Escaneo de los equipos de la red
+nmap -sn "$DIRECCION_IP/$MASCARA_SUBRED" -oN "$OUTPUT_FILE" -oX "$OUTPUT_XML"
+
+# Escaneo de los 100 puertos más comunes en los equipos de la red que responden a ping
+nmap -Pn --top-ports 100 -oN "$OUTPUT_FILE" -oX "$OUTPUT_XML" -iL "$OUTPUT_FILE"
+
+echo "Escaneo completo. Resultados guardados en $OUTPUT_FILE y $OUTPUT_XML"

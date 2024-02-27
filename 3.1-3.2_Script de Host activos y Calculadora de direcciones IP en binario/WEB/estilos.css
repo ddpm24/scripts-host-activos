@@ -32,7 +32,10 @@ header{
     left: 0;
     top: 0;
     z-index: 1;
-  }
+    box-shadow: 0px 1px 2px 0px rgba(0, 255, 55, 0.7),
+            1px 6px 8px 0px rgba(0, 255, 55, 0.7);
+            
+}
   
   /* Shapes & Animation
   */
@@ -142,12 +145,12 @@ p {
 .show {
     display: block; 
     opacity: 1; 
-    max-height: 1000px; /* Altura máxima */
+    max-height: 1000px; 
 }
 .hidden {
-    opacity: 0; /* Inicialmente oculto */
-    max-height: 0; /* Ocultar el contenido */
-    overflow: hidden; /* Para evitar que el contenido oculto se muestre */
+    opacity: 0; 
+    max-height: 0; 
+    overflow: hidden;  
     transition: opacity 0.5s ease, max-height 0.5s ease; /* Transición suave */
 }
 h2 {
@@ -159,8 +162,11 @@ h2 {
     color: #ab5f5f;
 }
 #ipv6{
-    margin-top: 20px;
+    margin-top: 70px;
     width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 #ipv6 h1{
     
@@ -225,7 +231,7 @@ h2 {
 .info h2:hover{
     background-color: #fff;
     border-color: transparent;
-    color: #444;
+    color: #46cc4f;
 }
 #Address{
     text-align: center;
